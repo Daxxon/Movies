@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <!--<meta charset="UTF-8">-->
+    <!--<link rel="stylesheet" type="text/css" href="styles.css"></link>-->
+    <title>Now Playing</title>
+  </head>
+  <body>
+    <div th:each="movie : ${nowPlaying}">
+      <img width="150px" th:attr="src=@{'http://image.tmdb.org/t/p/original' + ${movie.posterPath}}"/>
+      <span th:text="${movie.title}"></span>
+    </div>
+  </body>
+</html>
